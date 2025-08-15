@@ -255,7 +255,15 @@ nav .nav-right i {
     text-transform: uppercase;
 }
 
-.section-title {}
+.section-title {
+    text-align: center;
+        font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+        line-height: 1;
+        color: #17353d;
+
+        margin-bottom: 5rem;
+
+}
 
 .hero {
 
@@ -270,8 +278,41 @@ nav .nav-right i {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
-    margin-bottom: 50px;
 
+}
+
+.featured {
+
+    background: #eee;
+    padding: 150px 0;
+}
+
+.featured .container .split{
+
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &>* {
+        flex-basis: 30%;
+        min-width: 15em;
+    }
+}
+
+.featured .container .split .featured__item{
+
+    display: block;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out;
+
+}
+
+.featured .container .split .featured__item:hover,
+.featured .container .split .featured__item:hover{
+
+transform: scale(1);
 }
 
 
