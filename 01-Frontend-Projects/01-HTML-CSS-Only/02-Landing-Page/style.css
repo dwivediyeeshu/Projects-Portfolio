@@ -447,17 +447,61 @@ nav .nav-right i {
         font-size: 17px;
     }
 
+    /* Content layout */
+    .content {
+        flex-direction: column; /* stack vertically */
+        height: auto; /* remove fixed height */
+    }
+
     .content .content-left {
-        padding: 50px 40px;
         width: 100%;
+        padding: 40px;
+        text-align: center;
+        height: auto;
     }
 
     .content .content-left h1 {
         font-size: 40px;
     }
 
+    .content .content-left p {
+        width: 100%;
+    }
+
     .content .content-right {
-        padding: 40px;
+        width: 100%;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        height: auto;
+    }
+
+    .content .content-right .product1 {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+        background-color: #fff;
+        position: relative;
+        box-shadow: 0 5px 10px rgba(17, 0, 17, 0.2);
+        border-radius: 8px;
+    }
+
+    /* Reset absolute positioning */
+    .content .content-right .product1 img,
+    .content .content-right .product1 h4,
+    .content .content-right .product1 .category,
+    .content .content-right .product1 .color,
+    .content .content-right .product1 .price {
+        position: static;
+        margin: 5px 0;
+    }
+
+    .content .content-right .product1 img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
     }
 }
 
@@ -492,68 +536,70 @@ nav .nav-right i {
     /* Stack content vertically */
     .content {
         flex-direction: column;
+        height: auto;
     }
 
-    /* Remove fixed height so text fits */
     .content .content-left {
         width: 100%;
-        height: auto;
         padding: 20px;
         text-align: center;
-        order: -1;
-        /* Move above images */
-        background-color: var(--background-color);
-        position: relative;
-        z-index: 2;
+        order: -1; /* move text above products */
+        height: auto;
+    }
+
+    .content .content-left h1 {
+        font-size: 32px;
     }
 
     .content .content-left p {
         width: 100%;
+        font-size: 16px;
     }
 
-    /* Product list scrollable on mobile */
+    /* Product list horizontal scroll */
     .content .content-right {
         width: 100%;
         padding: 20px;
-        overflow-x: auto;
         display: flex;
         gap: 15px;
-        position: relative;
-        z-index: 1;
+        overflow-x: auto;
+        height: auto;
     }
 
-    .content .content-right .product {
+    .content .content-right::-webkit-scrollbar {
+        display: none;
+    }
+
+    .content .content-right .product1 {
         flex: 0 0 auto;
         width: 220px;
         height: auto;
+        padding: 12px;
+        text-align: center;
         background-color: #fff;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        box-shadow: 0 5px 10px rgba(17, 0, 17, 0.2);
+        border-radius: 8px;
     }
 
-    /* Remove absolute positioning on mobile */
-    .content .content-right .product img,
-    .content .content-right .product h4,
-    .content .content-right .product .category,
-    .content .content-right .product .color,
-    .content .content-right .product .price {
+    .content .content-right .product1 img,
+    .content .content-right .product1 h4,
+    .content .content-right .product1 .category,
+    .content .content-right .product1 .color,
+    .content .content-right .product1 .price {
         position: static;
+        margin: 5px 0;
     }
 
-    .content .content-right .product img {
+    .content .content-right .product1 img {
         width: 100%;
         height: auto;
-        object-fit: contain;
     }
 }
 
 /* Small Mobile Screens (≤ 480px) */
 @media (max-width: 480px) {
     nav .nav-left ul {
-        display: none;
-        /* Hide menu items */
+        display: none; /* hide menu items */
     }
 
     nav .nav-right i {
@@ -562,11 +608,11 @@ nav .nav-right i {
     }
 
     .content .content-left h1 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .content .content-left p {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .content .content-left .btn {
@@ -574,7 +620,7 @@ nav .nav-right i {
         font-size: 14px;
     }
 
-    .content .content-right .product {
-        width: 200px;
+    .content .content-right .product1 {
+        width: 180px;
     }
 }
