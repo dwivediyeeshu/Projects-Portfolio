@@ -6,23 +6,7 @@ It showcases my work, skills, and projects as I progress through the roadmap.
 ---
 
 ## 🖼️ Preview
-(Add a screenshot of your portfolio website here)  
-![Portfolio Website Screenshot](assets/preview.png)
-
----
-
-## ⚙️ Setup
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/portfolio-website.git
-
-2. Open the project folder:
-
-   ```bash
-   cd portfolio-website
-   ```
-3. Open `index.html` in your browser.
-   *(or run the development server if using React/Vue)*
+![Portfolio Website Screenshot](Assets/preview.png)
 
 ---
 
