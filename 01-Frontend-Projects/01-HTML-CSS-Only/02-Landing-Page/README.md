@@ -7,21 +7,6 @@ This landing page is part of my **6-month reskilling journey** where I’m build
 ## 🖼️ Preview  
 ![Landing Page Screenshot](Assets/preview.png)
 
----
-
-## ⚙️ Setup
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/landing-page.git
-
-2. Open the project folder:
-
-   ```bash
-   cd landing-page
-   ```
-3. Open `index.html` in your browser.
-
----
 
 ## 📌 About This Project
 
@@ -33,7 +18,7 @@ This landing page is part of my **6-month reskilling journey** where I’m build
 
 ## 🛣️ Next Steps in My 6-Month Roadmap
 
-This project is the **starting point** of my reskilling journey. Here’s what comes next:
+This project is the **second point** of my reskilling journey. Here’s what comes next:
 
 1. 🟢 **Landing Page (Current)** – HTML, CSS
 2. 🟡 **Portfolio Website** – Personal branding + multiple project showcases
