@@ -156,7 +156,7 @@ nav .nav-right i {
     display: none;
 }
 
-.content .content-right .product {
+.content .content-right .product1 {
     height: 370px;
     width: 250px;
     background-color: #1011;
@@ -168,7 +168,7 @@ nav .nav-right i {
 
 }
 
-.content .content-right .product img {
+.content .content-right .product1 img {
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -176,14 +176,14 @@ nav .nav-right i {
     bottom: 20%;
 }
 
-.content .content-right .product h4 {
+.content .content-right .product1 h4 {
     font-size: 18px;
     text-transform: capitalize;
     position: absolute;
     bottom: 28%;
 }
 
-.content .content-right .product .category {
+.content .content-right .product1 .category {
 
     position: absolute;
     bottom: 20%;
@@ -191,7 +191,7 @@ nav .nav-right i {
 
 }
 
-.content .content-right .product .color {
+.content .content-right .product1 .color {
 
     position: absolute;
     bottom: 15%;
@@ -199,7 +199,7 @@ nav .nav-right i {
 
 }
 
-.content .content-right .product .price {
+.content .content-right .product1 .price {
 
     font: 18px;
     position: absolute;
@@ -285,6 +285,8 @@ nav .nav-right i {
 
     background: #eee;
     padding: 150px 0;
+
+    margin-bottom: 150px;
 }
 
 .featured .container .split {
