@@ -79,4 +79,3 @@ Boolean("hi");  // true
 let gameCounter = 100
 gameCounter++;
 console.log(gameCounter);
-
