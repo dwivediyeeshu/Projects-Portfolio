@@ -64,3 +64,19 @@ console.log(booleanIsLoggedIn);
 let value = 3
 let negValue = -value
 console.log(negValue);
+
+// Conversion one type to another
+
+Number("123");  //123 (string + number)
+String(123);    // "123" (number + string)
+Boolean(0);     // false
+Boolean("hi");  // true
+
+// JS also does automatic type conversion(called type coercion)
+
+"5" + 2;  //"52"  (string + number = string)
+
+let gameCounter = 100
+gameCounter++;
+console.log(gameCounter);
+
