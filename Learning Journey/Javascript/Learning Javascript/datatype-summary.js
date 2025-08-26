@@ -80,3 +80,9 @@ obj2.a = 5; // obj1.a also 5
 console.log(obj1.a);
 
 // Javascript is Dynamically Typed.
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+
+// Stack(Primitve), Heap Memory (Non-Primitive)
