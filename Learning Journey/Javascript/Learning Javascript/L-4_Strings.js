@@ -26,3 +26,30 @@ console.log(gameName.indexOf('R'));
 
 // Does not change the original string.
 
+const newString = gameName.substring(0,4);      // We get sub string like Dark ( we do not get the end index value in the substring)
+
+console.log(newString);
+
+const anotherString = gameName.slice(0,4);    //dark
+const negString = gameName.slice(-10,4);    //ark 
+
+
+console.log(anotherString);
+console.log(negString);      
+
+
+const newStringOne = "         Yeeshu          "
+
+console.log(newStringOne);
+console.log(newStringOne.trim());                      // we can use trim start & trim end. Trim removes the whitespaces plus line terminators.
+
+const url = "https://yeeshu.com/yeeshu%25dwivedi"
+
+console.log(url.replace('%25', '-'));
+
+console.log(url.includes('cena'));
+
+console.log(gameName.split('k'));                // ['Dar' , 'Reunion']
+
+
+
