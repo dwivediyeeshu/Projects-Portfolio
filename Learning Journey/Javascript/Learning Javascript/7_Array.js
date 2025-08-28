@@ -27,3 +27,10 @@ myArr.pop()        // removes last element in array
 
 console.log(myArr)
 
+myArr.unshift(9)                // inserts the element at first element
+
+console.log(myArr)
+
+myArr.shift()                   // removes the first element from the array
+
+console.log(myArr)                 
