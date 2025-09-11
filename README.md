@@ -141,8 +141,3 @@ Collection of smaller experiments & practice tasks.
 ⭐ **If you found this repo helpful or inspiring, consider giving it a star!**
 
 ```
-
----
-
-Would you like me to also generate **mini README.md templates** for each sub-folder (Frontend, Backend, Full-Stack, DevOps, DSA, Learning-Journey) so every folder has its own documentation?
-```
