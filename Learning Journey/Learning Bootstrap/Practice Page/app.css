@@ -1,0 +1,12 @@
+html, body{
+    background-color: rgb(39, 38, 38);
+
+}
+.container{
+    border: 1px solid #ccc;
+    color: #ccc;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
