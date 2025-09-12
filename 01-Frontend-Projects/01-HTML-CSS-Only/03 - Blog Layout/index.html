@@ -1,11 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Layout</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Otaku Corner — Anime Blog</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">Otaku Corner</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#featured">Featured</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#classics">Classics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#other">Other anime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="container my-4">
+      <div class="hero p-4 p-md-5 shadow-sm">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h1 class="display-6 mb-2">Welcome to Otaku Corner</h1>
+            <p class="lead mb-3 text-light opacity-75">
+              Your bite-sized guide to popular anime — synopses, characters,
+              episode info, and recommendations. Responsive, clean, and ready to
+              customize.
+            </p>
+            <a href="#featured" class="btn btn-primary me-2"
+              >Explore Featured</a
+            >
+            <a href="#other" class="btn btn-outline-secondary">Browse More</a>
+          </div>
+          <div class="col-md-4 text-center d-none d-md-block">
+            <img
+              src="https://images.unsplash.com/photo-1542206395-9feb3edaa68f?q=80&w=900&auto=format&fit=crop&ixlib=rb-4.0.3&s=9b3eaf16d5dc8a3b4d6cc66a2a8d9b4d"
+              alt="anime"
+              class="img-fluid rounded"
+              style="max-height: 170px; object-fit: cover"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- FEATURED -->
+      <section id="featured" class="mb-5">
+        <div class="d-flex justify-content-between align-items-end mb-3">
+          <div>
+            <h2 class="section-title">Featured Anime</h2>
+            <p class="text-muted mb-0">
+              In-depth looks at long-running favorites.
+            </p>
+          </div>
+          <div class="text-end text-muted small">Updated: Sep 12, 2025</div>
+        </div>
+
+        <div class="row g-4">
+          <!-- One Piece -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card anime-card h-100 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1558981403-c5e9d7f6b4c8?q=80&w=1200&auto=format&fit=crop"
+                class="card-img-top"
+                alt="One Piece"
+              />
+              <div class="card-body d-flex flex-column">
+                <div class="mb-2">
+                  <span class="tag me-2">Adventure</span>
+                  <span class="tag">Shounen</span>
+                </div>
+                <h5 class="card-title">One Piece</h5>
+                <p class="card-text text-muted">
+                  A high-seas adventure following Monkey D. Luffy as he searches
+                  for the ultimate treasure — the One Piece — to become Pirate
+                  King.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <small class="text-muted">Eps: 1000+ | Ongoing</small>
+                  <button
+                    class="btn btn-sm btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalOnePiece"
+                  >
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Naruto -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card anime-card h-100 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1536597249889-29822e26913b?q=80&w=1200&auto=format&fit=crop"
+                class="card-img-top"
+                alt="Naruto"
+              />
+              <div class="card-body d-flex flex-column">
+                <div class="mb-2">
+                  <span class="tag me-2">Ninja</span>
+                  <span class="tag">Shounen</span>
+                </div>
+                <h5 class="card-title">Naruto (Shippuden)</h5>
+                <p class="card-text text-muted">
+                  Naruto Uzumaki, an energetic ninja with dreams of leadership,
+                  grows, fights powerful foes, and protects his village.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <small class="text-muted">Eps: 720 (incl. Shippuden)</small>
+                  <button
+                    class="btn btn-sm btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalNaruto"
+                  >
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- DBZ -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card anime-card h-100 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                class="card-img-top"
+                alt="DBZ"
+              />
+              <div class="card-body d-flex flex-column">
+                <div class="mb-2">
+                  <span class="tag me-2">Action</span>
+                  <span class="tag">Sci-Fi</span>
+                </div>
+                <h5 class="card-title">Dragon Ball Z</h5>
+                <p class="card-text text-muted">
+                  Goku and Earth's defenders battle ever-stronger foes — iconic
+                  fights, power-ups, and larger-than-life energy attacks.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <small class="text-muted">Eps: 291 (DBZ) + many movies</small>
+                  <button
+                    class="btn btn-sm btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalDBZ"
+                  >
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Bleach -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card anime-card h-100 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1530639836708-9b4e1d008cef?q=80&w=1200&auto=format&fit=crop"
+                class="card-img-top"
+                alt="Bleach"
+              />
+              <div class="card-body d-flex flex-column">
+                <div class="mb-2">
+                  <span class="tag me-2">Supernatural</span>
+                  <span class="tag">Shounen</span>
+                </div>
+                <h5 class="card-title">Bleach</h5>
+                <p class="card-text text-muted">
+                  Ichigo Kurosaki becomes a Soul Reaper and defends the human
+                  world and Soul Society from Hollows and other threats.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <small class="text-muted"
+                    >Eps: 366 + Thousand-Year Blood War</small
+                  >
+                  <button
+                    class="btn btn-sm btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalBleach"
+                  >
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Other Anime Card (example) -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card anime-card h-100 shadow-sm">
+              <img
+                src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop"
+                class="card-img-top"
+                alt="Other anime"
+              />
+              <div class="card-body d-flex flex-column">
+                <div class="mb-2">
+                  <span class="tag me-2">Slice of Life</span>
+                  <span class="tag">Drama</span>
+                </div>
+                <h5 class="card-title">Other Picks</h5>
+                <p class="card-text text-muted">
+                  Short takes on Attack on Titan, My Hero Academia, Demon
+                  Slayer, Jujutsu Kaisen, and more.
+                </p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <small class="text-muted">Curated list</small>
+                  <a href="#other" class="btn btn-sm btn-outline-primary"
+                    >See More</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- /row -->
+      </section>
+
+      <!-- CLASSICS (quick list + filter) -->
+      <section id="classics" class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="section-title">Classic & Popular</h2>
+          <div class="btn-group filter-group" role="group">
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-secondary active"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-secondary"
+              data-filter="shounen"
+            >
+              Shounen
+            </button>
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-secondary"
+              data-filter="seinen"
+            >
+              Seinen
+            </button>
+          </div>
+        </div>
+
+        <div class="row g-3 classics-list">
+          <div
+            class="col-6 col-md-3 col-lg-2 classic-item"
+            data-category="shounen"
+          >
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/400x220?text=AoT"
+                class="card-img-top"
+                alt="Attack on Titan"
+              />
+              <div class="card-body p-2">
+                <h6 class="m-0">Attack on Titan</h6>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-6 col-md-3 col-lg-2 classic-item"
+            data-category="shounen"
+          >
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/400x220?text=Demon+Slayer"
+                class="card-img-top"
+                alt="Demon Slayer"
+              />
+              <div class="card-body p-2"><h6 class="m-0">Demon Slayer</h6></div>
+            </div>
+          </div>
+          <div
+            class="col-6 col-md-3 col-lg-2 classic-item"
+            data-category="shounen"
+          >
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/400x220?text=My+Hero"
+                class="card-img-top"
+                alt="MHA"
+              />
+              <div class="card-body p-2">
+                <h6 class="m-0">My Hero Academia</h6>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-6 col-md-3 col-lg-2 classic-item"
+            data-category="seinen"
+          >
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/400x220?text=Steins;Gate"
+                class="card-img-top"
+                alt="Steins;Gate"
+              />
+              <div class="card-body p-2"><h6 class="m-0">Steins;Gate</h6></div>
+            </div>
+          </div>
+          <div
+            class="col-6 col-md-3 col-lg-2 classic-item"
+            data-category="seinen"
+          >
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/400x220?text=Cowboy+Bebop"
+                class="card-img-top"
+                alt="Cowboy Bebop"
+              />
+              <div class="card-body p-2"><h6 class="m-0">Cowboy Bebop</h6></div>
+            </div>
+          </div>
+          <div
+            class="col-6 col-md-3 col-lg-2 classic-item"
+            data-category="shounen"
+          >
+            <div class="card h-100 shadow-sm">
+              <img
+                src="https://via.placeholder.com/400x220?text=Fullmetal+Alchemist"
+                class="card-img-top"
+                alt="FMA"
+              />
+              <div class="card-body p-2">
+                <h6 class="m-0">Fullmetal Alchemist</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OTHER -->
+      <section id="other" class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <h2 class="section-title">Other anime & recommendations</h2>
+            <p class="text-muted mb-0">Short blurbs for quick browsing.</p>
+          </div>
+          <a href="#featured" class="small">Return to top</a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Attack on Titan</h5>
+                <p class="card-text text-muted">
+                  Dark fantasy about humanity's fight against the Titans. Heavy
+                  themes and intense plot twists.
+                </p>
+                <a href="#" class="btn btn-sm btn-outline-primary"
+                  >Read review</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Demon Slayer</h5>
+                <p class="card-text text-muted">
+                  A beautifully animated tale of siblings, demons, and swords.
+                  Great for newcomers.
+                </p>
+                <a href="#" class="btn btn-sm btn-outline-primary"
+                  >Read review</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Jujutsu Kaisen</h5>
+                <p class="card-text text-muted">
+                  Modern shounen with slick fight choreography and a strong
+                  supporting cast.
+                </p>
+                <a href="#" class="btn btn-sm btn-outline-primary"
+                  >Read review</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT / FOOTER CALLOUT -->
+      <section id="about" class="mb-5">
+        <div class="card p-3 shadow-sm">
+          <div class="row g-3 align-items-center">
+            <div class="col-md-8">
+              <h4 class="mb-1">About Otaku Corner</h4>
+              <p class="text-muted mb-0">
+                Short blog prototype for anime lovers — built with Bootstrap.
+                Use this as a starting point: add routes, CMS, or a static-site
+                generator to turn it into a full blog.
+              </p>
+            </div>
+            <div class="col-md-4 text-md-end">
+              <a class="btn btn-primary" href="#">Subscribe</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <small>&copy; 2025 Otaku Corner · Built with and Bootstrap</small>
+      </div>
+    </footer>
+
+    <!-- MODALS: OnePiece, Naruto, DBZ, Bleach -->
+    <!-- One Piece Modal -->
+    <div
+      class="modal fade"
+      id="modalOnePiece"
+      tabindex="-1"
+      aria-labelledby="onePieceLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-4">
+            <div class="d-flex gap-3 flex-column flex-md-row">
+              <img
+                src="https://images.unsplash.com/photo-1558981403-c5e9d7f6b4c8?q=80&w=1200&auto=format&fit=crop"
+                alt="One Piece"
+                class="modal-img"
+              />
+              <div>
+                <h3>One Piece</h3>
+                <p class="text-muted">
+                  Creator: Eiichiro Oda · Genre: Adventure / Fantasy / Shounen
+                </p>
+                <p>
+                  Synopsis: Monkey D. Luffy gathers a diverse crew and sails
+                  through the Grand Line searching for "One Piece", the
+                  legendary treasure that will make him the Pirate King. It's a
+                  blend of adventure, heart, and world-building with deep lore
+                  and long-running story arcs.
+                </p>
+                <ul class="mb-2">
+                  <li>
+                    <strong>Main characters:</strong> Monkey D. Luffy, Roronoa
+                    Zoro, Nami, Sanji, Usopp, Tony Tony Chopper, Nico Robin,
+                    Franky, Brook.
+                  </li>
+                  <li><strong>Episodes:</strong> 1000+ (ongoing as of 2025)</li>
+                  <li>
+                    <strong>Why watch?</strong> World-building, memorable
+                    characters, mix of comedy and drama, emotional arcs, and
+                    long-term payoff.
+                  </li>
+                </ul>
+                <p class="mb-0">
+                  <strong>Similar:</strong> Naruto (for long-term character
+                  growth), Hunter x Hunter (for adventure & unique powers).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary">Read full article</a>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Naruto Modal -->
+    <div
+      class="modal fade"
+      id="modalNaruto"
+      tabindex="-1"
+      aria-labelledby="narutoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-4">
+            <div class="d-flex gap-3 flex-column flex-md-row">
+              <img
+                src="https://images.unsplash.com/photo-1536597249889-29822e26913b?q=80&w=1200&auto=format&fit=crop"
+                alt="Naruto"
+                class="modal-img"
+              />
+              <div>
+                <h3>Naruto & Naruto Shippuden</h3>
+                <p class="text-muted">
+                  Creator: Masashi Kishimoto · Genre: Ninja / Action / Shounen
+                </p>
+                <p>
+                  Synopsis: Naruto Uzumaki is an orphaned ninja with a sealed
+                  demon fox inside him. He dreams of becoming Hokage and earns
+                  his village's respect through struggle, bonds, and epic
+                  battles. The series spans adolescence to adulthood with many
+                  legendary arcs.
+                </p>
+                <ul class="mb-2">
+                  <li>
+                    <strong>Main characters:</strong> Naruto Uzumaki, Sasuke
+                    Uchiha, Sakura Haruno, Kakashi Hatake.
+                  </li>
+                  <li>
+                    <strong>Episodes:</strong> ~720 combined (Naruto +
+                    Shippuden), plus Boruto continuation.
+                  </li>
+                  <li>
+                    <strong>Why watch?</strong> Character arcs, iconic
+                    techniques (Rasengan, Chidori), emotional rivalries.
+                  </li>
+                </ul>
+                <p class="mb-0">
+                  <strong>Similar:</strong> Bleach (team dynamics), My Hero
+                  Academia (growth & school/mentor themes).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary">Read full article</a>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DBZ Modal -->
+    <div
+      class="modal fade"
+      id="modalDBZ"
+      tabindex="-1"
+      aria-labelledby="dbzLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-4">
+            <div class="d-flex gap-3 flex-column flex-md-row">
+              <img
+                src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
+                alt="DBZ"
+                class="modal-img"
+              />
+              <div>
+                <h3>Dragon Ball Z</h3>
+                <p class="text-muted">
+                  Creator: Akira Toriyama · Genre: Action / Martial Arts /
+                  Sci-Fi
+                </p>
+                <p>
+                  Synopsis: The saga of Goku and his allies defending Earth and
+                  the universe from villains like Frieza, Cell, and Majin Buu.
+                  High-energy fights, transformations (Super Saiyan), and
+                  escalating stakes define DBZ's legacy.
+                </p>
+                <ul class="mb-2">
+                  <li>
+                    <strong>Main characters:</strong> Goku, Vegeta, Gohan,
+                    Piccolo, Trunks.
+                  </li>
+                  <li>
+                    <strong>Episodes:</strong> 291 (DBZ), plus Dragon Ball,
+                    Super, and many films.
+                  </li>
+                  <li>
+                    <strong>Why watch?</strong> Nostalgic fights, power-scaling,
+                    and a cultural cornerstone of shounen anime.
+                  </li>
+                </ul>
+                <p class="mb-0">
+                  <strong>Similar:</strong> One Piece (long-running adventure),
+                  Hunter x Hunter (for power-system depth).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary">Read full article</a>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bleach Modal -->
+    <div
+      class="modal fade"
+      id="modalBleach"
+      tabindex="-1"
+      aria-labelledby="bleachLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-4">
+            <div class="d-flex gap-3 flex-column flex-md-row">
+              <img
+                src="https://images.unsplash.com/photo-1530639836708-9b4e1d008cef?q=80&w=1200&auto=format&fit=crop"
+                alt="Bleach"
+                class="modal-img"
+              />
+              <div>
+                <h3>Bleach</h3>
+                <p class="text-muted">
+                  Creator: Tite Kubo · Genre: Supernatural / Shounen
+                </p>
+                <p>
+                  Synopsis: Ichigo Kurosaki, who can see spirits, becomes a Soul
+                  Reaper and gets pulled into conflicts across the human world
+                  and Soul Society, facing Hollow threats and complex
+                  conspiracies.
+                </p>
+                <ul class="mb-2">
+                  <li>
+                    <strong>Main characters:</strong> Ichigo Kurosaki, Rukia
+                    Kuchiki, Byakuya Kuchiki, Uryu Ishida, Toshiro Hitsugaya.
+                  </li>
+                  <li>
+                    <strong>Episodes:</strong> 366 (original) + Thousand-Year
+                    Blood War arc (recent seasons).
+                  </li>
+                  <li>
+                    <strong>Why watch?</strong> Stylish fights, a large cast,
+                    and a deep supernatural world.
+                  </li>
+                </ul>
+                <p class="mb-0">
+                  <strong>Similar:</strong> Naruto (team arcs), D.Gray-man
+                  (supernatural vibes).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="#" class="btn btn-primary">Read full article</a>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS (Bundle includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Optional: small script to keep navbar link active on scroll (simple) -->
+    <script>
+      // Simple active-link on click for single page nav (no routing)
+      document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          document
+            .querySelectorAll(".navbar-nav .nav-link")
+            .forEach((n) => n.classList.remove("active"));
+          link.classList.add("active");
+        });
+      });
+      const filterButtons = document.querySelectorAll(".filter-group button");
+      const classics = document.querySelectorAll(".classic-item");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.getAttribute("data-filter");
+          classics.forEach((item) => {
+            if (filter === "all" || item.dataset.category === filter) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
