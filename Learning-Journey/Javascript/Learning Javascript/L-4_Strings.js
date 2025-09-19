@@ -15,7 +15,7 @@ console.log(gameName);     // [String: 'DarkReunion']
 
 console.log(gameName[0]);                 // D
 
-console.log(gameName.__proto__);           // We got object {}
+console.log(gameName.__proto__);           // We got object {} to get Proto
 
 
 console.log(gameName.length);

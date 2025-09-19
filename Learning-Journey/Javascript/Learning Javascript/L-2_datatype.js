@@ -15,7 +15,7 @@ let empty = null;
  number => 2 to power 53
  bigint
  string => ""
- boolean => tue/false
+ boolean => true/false
  null => standalone value or empty value
  undefined => declared but not assigned
  symbol = > unique
@@ -42,8 +42,8 @@ console.log(typeof score);
 
 let  valueInNumber = Number(score);
 
-console.log(typeof valueInNumber);
-console.log(valueInNumber);
+console.log(typeof valueInNumber); 
+console.log(valueInNumber); // NaN - Not a Number
 
 
 // "33" => 33
