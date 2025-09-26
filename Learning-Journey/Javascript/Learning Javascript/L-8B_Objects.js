@@ -53,3 +53,20 @@ users[1].email
 // console.log(Object.entries(instaUser));
 
 // console.log(instaUser.hasOwnProperty('isLoggedIn'));
+
+
+/*---------- Objects Destructuring -------------*/
+
+const course = {
+    coursename: "JS",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course
+
+//console.log(courseInstructor);
+
+console.log(instructor);
