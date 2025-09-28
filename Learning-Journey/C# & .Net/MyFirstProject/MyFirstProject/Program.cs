@@ -65,6 +65,20 @@ namespace MyFirstProject
             int intNumber = Convert.ToInt32(strNumber);
             Console.WriteLine(intNumber);
 
+            // Var and Const data types
+
+            var myVar = 10;   // need to initialize while declaring
+            var myVar2 = "Hello";
+            var myVar3 = 12.34;
+
+            Console.WriteLine(myVar);     
+            Console.WriteLine(myVar2);
+            Console.WriteLine(myVar3);
+
+            const double pi = 3.14;   // need to initialize while declaring
+                                      // pi is a constant, its value cannot be changed
+                                      // need to use 'const' keyword and data type while declaring
+             //pi = 2.22;             // Error: cannot change the value of a constant
 
             Console.ReadLine();
         }
