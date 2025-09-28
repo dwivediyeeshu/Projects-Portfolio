@@ -1,0 +1,38 @@
+# 🔧 General system files
+.DS_Store
+Thumbs.db
+
+# 🧠 VS Code settings
+.vscode/
+
+# 🔐 Environment files
+.env
+
+# 🗑️ Logs and temp files
+*.log
+*.tmp
+*.bak
+
+# 📦 Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 🧱 C# / .NET build artifacts
+*.suo
+*.user
+*.sln.docstates
+*.dbmdl
+*.db
+*.pdb
+*.cache
+*.log
+*.vs/
+bin/
+obj/
+
+# 🧪 Optional: ignore compiled files or IDE configs
+*.class
+*.iml
+.idea/
