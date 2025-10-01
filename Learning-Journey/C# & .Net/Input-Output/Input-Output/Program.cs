@@ -31,6 +31,15 @@ namespace Input_Output
 
             Console.WriteLine($"Your name is {name} and you are {age}");
 
+            // Another Example
+
+            int quantityAvailable = 26;
+
+            Console.WriteLine(quantityAvailable);
+            Console.WriteLine("Quantity Available: " + quantityAvailable);
+            Console.WriteLine($"Quantity Available: {quantityAvailable}");
+            Console.WriteLine("Quantity Available: {0}", quantityAvailable);
+
 
 
 

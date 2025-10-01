@@ -50,9 +50,37 @@ namespace Operators
             Console.WriteLine(x / y);  // 2
             Console.WriteLine(x % y);  // 6
 
+
+            // Comparison Operators
+            // ==, !=, >, <, >=, <=
+            Console.WriteLine(x == y); // False
+            Console.WriteLine(x != y); // True
+            Console.WriteLine(x > y);  // True
+            Console.WriteLine(x < y);  // False
+            Console.WriteLine(x >= y); // True
+            Console.WriteLine(x <= y); // False
+
+            // Logical Operators
+            // &&, ||, !
+
+            bool a = true;
+            bool b = false;
+            Console.WriteLine(a && b); // False        
+            Console.WriteLine(a || b); // True
+            Console.WriteLine(!a);     // False
+
+            if(age > 18 && age < 60)
+            {
+                Console.WriteLine("You are eligible to work.");
+            }
+            else
+            {
+                Console.WriteLine("You are not eligible to work.");
+            }
+
+
             Console.ReadLine();
 
-            
         }
     }
 }
