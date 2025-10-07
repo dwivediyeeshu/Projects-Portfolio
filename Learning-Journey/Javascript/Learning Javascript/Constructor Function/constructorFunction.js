@@ -41,5 +41,13 @@ console.log(dog.sound());
 let cat = new Animal("cat")
 console.log(cat.sound());
 
+function Drink(name){
+    if(!new.target){
+        throw new Error("Drink must be called with new keyword");
+        
+    }
+    this.name = name
+}
 
-
+let tea = new Drink("tea");
+let coffee = Drink("coffee");
