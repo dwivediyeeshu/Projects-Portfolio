@@ -17,5 +17,10 @@ myLi.addEventListener("click", function () {
     myLi.innerText = "five"
 })
 
+const ulList = document.getElementsByClassName('list-item')  //  gives html element type
 
+const convArray = Array.from(ulList) // to convert htmlElement type to Array
+    convArray.forEach((li) => {
+        li.style.color = "orange"
+    })
 
