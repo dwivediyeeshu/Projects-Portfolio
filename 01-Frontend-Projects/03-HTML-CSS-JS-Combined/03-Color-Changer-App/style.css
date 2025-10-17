@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    background-color: rgb(141, 238, 241);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.heading {
+    font-size: 2em;
+    margin: 3em 0 2em;
+    font-weight: 700;
+}
+
+.input input, .input button{
+    padding: 10px 45px;
+    border-radius: 10px;
+    outline: none;
+    background-color: inherit;
+    border: 1px solid #000;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    margin: 5px;
+}
+
+::placeholder{
+    color: black;
+}
+
+.input button {
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.input button:hover{
+    background-color: #3b3a3a;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+.canvas {
+  margin: 100px auto 100px;
+  width: 80%;
+  text-align: center;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  border: solid black 2px;
+  display: inline-block;
+
+  margin-bottom: 40px;
+}
+
+#grey {
+  background: grey;
+}
+
+#white {
+  background: white;
+}
+#blue {
+  background: blue;
+}
+#yellow {
+  background: yellow;
+}
+
+
