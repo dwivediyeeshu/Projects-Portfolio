@@ -2,7 +2,7 @@
 
 :root {
     --underweight: orange;
-    --normal: green;
+    --healthy: green;
     --overweight: lightcoral;
     --obese: crimson;
 
@@ -110,4 +110,18 @@ h1{
 .bmi-scale h4 {
     font-size: 0.75rem;
     color: slategray;
+}
+
+.underweight {
+    color: var(--underweight);
+}
+
+.healthy {
+    color: var(--healthy);
+}
+.overweight {
+    color: var(--overweight);
+}
+.obese {
+    color: var(--obese);
 }

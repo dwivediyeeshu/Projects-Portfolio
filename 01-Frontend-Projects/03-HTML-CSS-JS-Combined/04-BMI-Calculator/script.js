@@ -16,20 +16,27 @@ form.addEventListener("submit", function (e) {
     descText.textContent = "Enter a Valid Weight";
   } else {
     const bmi = (weight / (Math.pow(height, 2) / 10000)).toFixed(2);
+    const desc = interpretBMI(bmi)
 
     bmiText.textContent = bmi;
-    descText.textContent = interpretBMI(bmi);
+    bmiText.className = desc;
+    descText.innerHTML = `You are <strong>${desc}</strong>`;
   }
 });
 
 function interpretBMI(bmi) {
   if (bmi < 18.5) {
-    return "Underweight";
+    return "underweight";
   } else if (bmi >= 18.5 && bmi < 25) {
-    return "Healthy";
+    return "healthy";
   } else if (bmi >= 25 && bmi < 30) {
-    return "Overweight";
+    return "overweight";
   } else {
-    return "Obese";
+    return "obese";
   }
 }
+
+form.addEventListener('reset', function (e) {
+   bmiText.textContent = '0'
+   descText.textContent = "N/A" 
+});
