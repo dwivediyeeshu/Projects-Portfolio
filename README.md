@@ -44,7 +44,8 @@ It is structured to highlight different aspects of my growth as a developer, wit
 
 * **JavaScript** (Frontend & Backend)
 * **C++** (DSA)
-* **Python** (Scripting & automation)
+* **GoLang** (Scripting & automation)
+* **C#** (DotNet development)
 
 ### 🔹 Frontend
 
