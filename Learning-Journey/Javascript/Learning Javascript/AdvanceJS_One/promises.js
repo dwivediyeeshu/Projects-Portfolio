@@ -102,3 +102,8 @@ fetch('https://api.github.com/users/dwivediyeeshu')
 .catch((error) => console.log(error))
 
 // promise.all
+// setTimeout() → goes into macrotask queue (lower priority)
+// ✅ fetch() → uses microtask queue (higher priority)
+// ✅ Promise.all() → combines multiple promises and waits for all to resolve
+
+// So the fetch() appears first because microtasks always run before macrotasks in the event loop cycle.
