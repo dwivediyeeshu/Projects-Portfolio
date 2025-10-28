@@ -40,3 +40,14 @@ Async Task complete.
 Here, setTimeout() is asynchronous — it schedules a task for later.
 JavaScript doesn’t wait for 2 seconds — it moves on and runs the rest of the code.
 */
+
+
+console.log("Fetching user...");
+
+fetch("https://api.github.com/users/dwivediyeeshu")
+  .then(res => res.json())
+  .then(data => console.log(data.login))
+  .catch(err => console.error(err));
+
+console.log("Request sent...");
+
