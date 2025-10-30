@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch with Timeout Demo</title>
+  <style>
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding-top: 80px;
+    }
+
+    h1 {
+      color: #38bdf8;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    #status {
+      margin-top: 40px;
+      font-size: 20px;
+      color: #a5f3fc;
+      transition: 0.3s;
+    }
+
+    #status.success {
+      color: #4ade80;
+    }
+
+    #status.error {
+      color: #f87171;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Fetch with Timeout Demo</h1>
+  <p>Click a button and watch the console + message below 👇</p>
+
+  <div>
+    <button onclick="handleFetch(2000)">Timeout: 2s</button>
+    <button onclick="handleFetch(4000)">Timeout: 4s</button>
+    <button onclick="handleFetch(1000)">Timeout: 1s (Too Short)</button>
+  </div>
+
+  <div id="status">Waiting for action...</div>
+
+  <script>
+    // 🕒 Core logic: Adds a timeout to any Promise
+    function fetchWithTimeout(promise, timeout) {
+      const timeoutPromise = new Promise((_, reject) => 
+        setTimeout(() => reject('⏰ Timeout exceeded'), timeout)
+      );
+      return Promise.race([promise, timeoutPromise]);
+    }
+
+    // 🧠 Mock function that simulates a slow API call
+    function fetchData() {
+      return new Promise(resolve => {
+        console.log('🌐 Fetching data...');
+        setTimeout(() => resolve('✅ Data fetched successfully!'), 3000);
+      });
+    }
+
+    // 🎮 UI handler
+    async function handleFetch(timeout) {
+      const status = document.getElementById('status');
+      status.className = '';
+      status.textContent = `Fetching data with ${timeout / 1000}s timeout...`;
+
+      try {
+        const result = await fetchWithTimeout(fetchData(), timeout);
+        console.log('✅ Result:', result);
+        status.textContent = result;
+        status.classList.add('success');
+      } catch (error) {
+        console.log('❌ Error:', error);
+        status.textContent = error;
+        status.classList.add('error');
+      }
+    }
+  </script>
+</body>
+</html>
