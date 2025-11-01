@@ -1,32 +1,30 @@
-# 📝 To-Do List App
+# 📝 Todo List App
 
-A simple and elegant **To-Do List** built with **HTML**, **CSS**, and **JavaScript**.  
-Add, complete, and delete tasks with data saved in **localStorage**.
-
----
+A simple console-based **JavaScript Todo List** that lets you add, list, and delete tasks using browser prompts.
 
 ## 🚀 Features
-- ➕ Add new tasks  
-- ✅ Mark tasks as completed  
-- ❌ Delete tasks  
-- 💾 Auto-save using localStorage  
-- 🌓 Clean, minimal design (supports Tailwind CSS)
+- Add new todos  
+- List all todos  
+- Delete todos by index  
+- Quit anytime (`quit` / `q`)  
+- Input validation for empty or invalid entries  
 
----
+## ⚙️ How to Run
+1. Open `index.html` in your browser  
+2. Open **Console** (`F12` → Console tab)  
+3. Follow on-screen prompts  
+
+## 💻 Commands
+| Command | Action |
+|----------|--------|
+| `new` | Add a todo |
+| `list` | Show all todos |
+| `delete` | Delete by index |
+| `quit` / `q` | Exit the app |
+
+## 🧩 Files
+- `index.html` – Loads the app  
+- `toDolist.js` – Core logic  
 
 ## 🛠️ Tech Stack
-- HTML5  
-- Tailwind CSS / CSS3  
-- Vanilla JavaScript (ES6)  
-- LocalStorage API
-
----
-
-## ⚙️ How It Works
-1. Tasks load from `localStorage` on page load.  
-2. Add a new task → click **Add Task**.  
-3. Click a task to toggle completion.  
-4. Click **Delete** to remove it.  
-5. All updates auto-save to localStorage.
-
----
+HTML, JavaScript (ES6)
