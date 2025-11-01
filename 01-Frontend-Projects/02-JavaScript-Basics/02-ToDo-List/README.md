@@ -10,7 +10,7 @@ A simple console-based **JavaScript Todo List** that lets you add, list, and del
 - Input validation for empty or invalid entries  
 
 ## ⚙️ How to Run
-1. Open `index.html` in your browser  
+1. Open `todoList.html` in your browser  
 2. Open **Console** (`F12` → Console tab)  
 3. Follow on-screen prompts  
 
@@ -23,7 +23,7 @@ A simple console-based **JavaScript Todo List** that lets you add, list, and del
 | `quit` / `q` | Exit the app |
 
 ## 🧩 Files
-- `index.html` – Loads the app  
+- `todoList.html` – Loads the app  
 - `toDolist.js` – Core logic  
 
 ## 🛠️ Tech Stack
