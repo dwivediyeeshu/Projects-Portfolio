@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //unlock the display
     weatherInfo.classList.remove('hidden')
-    errorMessage.classList.add('hidden')
+    errorDisplay.classList.add('hidden')
   }
 
   function showError() {
