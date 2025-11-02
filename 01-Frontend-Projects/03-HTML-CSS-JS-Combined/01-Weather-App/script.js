@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const speedDisplay = document.getElementById("wind-speed");
   const errorDisplay = document.getElementById("error-message");
 
-  const API_KEY = "cb11afbca99b59ad1357230ff5b0f44b"; // // NEED To have env variable to hide.. Sensitive info
+  const API_KEY = ""; // // NEED To have env variable to hide.. Sensitive info
 
   button.addEventListener("click", async () => {
     const City = inputCity.value.trim();
@@ -38,11 +38,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const data = await response.json();
+    console.log(data);
+    
     return data;
   }
 
   function displayWeatherData(data) {
     // display
+    const {name, main, weather, wind} = data
+    cityNameDisplay.textContent = name;
+    tempDisplay.textContent = `Temperature: ${main.temp}`;
+    feelsDisplay.textContent = `Feels Like: ${main.feels_like}`;
+    descDisplay.textContent = `Weather: ${weather[0].description.toUpperCase()}`;
+    humidityDisplay.textContent = `Humidity: ${main.humidity}`
+    speedDisplay.textContent = `Wind Speed: ${wind.speed}`
+
+    //unlock the display
+    weatherInfo.classList.remove('hidden')
+    errorMessage.classList.add('hidden')
   }
 
   function showError() {
