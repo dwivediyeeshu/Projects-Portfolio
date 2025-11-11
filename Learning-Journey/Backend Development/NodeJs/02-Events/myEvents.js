@@ -10,6 +10,9 @@ const eventEmitter = new EventEmitter();
 eventEmitter.on("greet", (username) => {
   console.log(`Hello ${username} and Welcome to the Events in Node js.`);
 });
+eventEmitter.on("greet", (username) => {
+  console.log(`Hola Amigo ${username} Kaise ho theek ho.`);
+});
 
 eventEmitter.once("pushnotify", () => {
   console.log("This event will run only once");
@@ -33,3 +36,8 @@ eventEmitter.emit("test");
 eventEmitter.removeListener("test", myListener);
 
 eventEmitter.emit("test");  // this will not work as we have removed the event listener
+
+// console.log(eventEmitter);
+console.log(eventEmitter.listeners("greet"));
+console.log(eventEmitter.listeners("test"));  // as we have removed event on
+
